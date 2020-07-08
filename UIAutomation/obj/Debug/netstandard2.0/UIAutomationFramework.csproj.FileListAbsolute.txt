@@ -1,0 +1,9 @@
+C:\Users\972797\source\repos\UIAutomation\UIAutomation\bin\Debug\netstandard2.0\UIAutomationFramework.deps.json
+C:\Users\972797\source\repos\UIAutomation\UIAutomation\bin\Debug\netstandard2.0\UIAutomationFramework.dll
+C:\Users\972797\source\repos\UIAutomation\UIAutomation\obj\Debug\netstandard2.0\UIAutomationFramework.csprojAssemblyReference.cache
+C:\Users\972797\source\repos\UIAutomation\UIAutomation\obj\Debug\netstandard2.0\UIAutomationFramework.AssemblyInfoInputs.cache
+C:\Users\972797\source\repos\UIAutomation\UIAutomation\obj\Debug\netstandard2.0\UIAutomationFramework.AssemblyInfo.cs
+C:\Users\972797\source\repos\UIAutomation\UIAutomation\bin\Debug\netstandard2.0\UIAutomationFramework.pdb
+C:\Users\972797\source\repos\UIAutomation\UIAutomation\obj\Debug\netstandard2.0\UIAutomationFramework.csproj.CoreCompileInputs.cache
+C:\Users\972797\source\repos\UIAutomation\UIAutomation\obj\Debug\netstandard2.0\UIAutomationFramework.dll
+C:\Users\972797\source\repos\UIAutomation\UIAutomation\obj\Debug\netstandard2.0\UIAutomationFramework.pdb
