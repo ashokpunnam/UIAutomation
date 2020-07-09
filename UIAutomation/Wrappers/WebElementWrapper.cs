@@ -4,7 +4,13 @@ using System.Text;
 
 namespace UIAutomationFramework.Wrappers
 {
-    class WebElementWrapper
+   public static class WebElementWrapper
     {
+        public static void executeJavaScript()
+        {
+
+
+        }
+
     }
 }
