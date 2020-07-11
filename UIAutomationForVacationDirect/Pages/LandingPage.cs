@@ -18,10 +18,10 @@ namespace UIAutomationForVacationDirect.Pages
 
         private By btnHotel = By.XPath("//*[@id='SearchWidgetWrapper']/section/div/ul/li[2]/button");
 
-        public void clickHotel()
+        public HotelSearchPage clickHotel()
         {
             driver.FindElement(btnHotel).Click();
-
+            return new HotelSearchPage();
 
         }
     }

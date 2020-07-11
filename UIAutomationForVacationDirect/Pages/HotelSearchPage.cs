@@ -15,9 +15,11 @@ namespace UIAutomationForVacationDirect.Pages
 
         }
 
-        private By txtDestination = By.Id("inputDestination");
-        private By dtCheckInDate = By.Id("inputCheckInDate");
-        private By dtCheckOutDate = By.Id("inputCheckOutDate");
+        private By byDestination = By.Id("inputDestination");
+        private By byCheckInDate = By.Id("inputCheckInDate");
+        private By byCheckoutDate = By.Id("inputCheckOutDate");
+        private By byDatePicker = By.XPath("//*[contains(@class, 'datepicker-state-default')]");
+       // private By dtCheckOutDate = By.XPath("//*[contains(@class,'datepicker-state-default')]");       
         private By slctHotelNumberAdults = By.Id("selectHotelNumberAdults");
         private By slctHotelNumberChildren = By.Id("selectHotelNumberChildren");
         private By btnMoreOptions = By.Id("hotelOptionsLink");
@@ -25,15 +27,25 @@ namespace UIAutomationForVacationDirect.Pages
         private By slctStarRating = By.Id("selectStarRating");
         private By btnhotelSearchButton = By.Id("hotelSearchButton");
 
-        public void SearchForHotels(string city, String checkInDate, String checkOutDate) //int noOfAdults, int noOfChildren)
+        public HotelSearchResultsPage SearchForHotels(string city, int checkInDate, int checkOutDate) 
         {
-            IWebElement elmDestination = driver.FindElement(txtDestination);
+            sendKeys(byDestination, city);
+            Click(byCheckInDate);
+            getWebElementsAndSendKeys(byDatePicker, checkInDate);
+            Click(byCheckoutDate);
+            getWebElementsAndSendKeys(byDatePicker, checkOutDate);
+            driver.FindElement(btnhotelSearchButton).Click();
+            return new HotelSearchResultsPage();
+
+
+            /*IWebElement elmDestination = driver.FindElement(txtDestination);
             elmDestination.SendKeys(city);
             elmDestination.SendKeys(Keys.ArrowDown);
             elmDestination.SendKeys(Keys.Enter);
             js.ExecuteScript("document.getElementById('inputCheckInDate').setAttribute('value','07/08/20')");
             js.ExecuteScript("document.getElementById('inputCheckOutDate').setAttribute('value','08/07/20')");
             driver.FindElement(btnhotelSearchButton).Click();
+            return new HotelSearchResultsPage();*/
         }
 
 
