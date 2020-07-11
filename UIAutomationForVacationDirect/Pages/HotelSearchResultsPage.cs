@@ -20,16 +20,37 @@ namespace UIAutomationForVacationDirect.Pages
         private By srtPricePerNight = By.Id("PricePerNight");
         private By srtDistanceSort = By.Id("DistanceSort");
         private By srtHotelName = By.Id("HotelName");
-        private By btnChooseRoom = By.XPath("//div[starts-with(@id,'ChooseRoom')]");
+        private By btnChooseRoom = By.XPath("//*[contains(@id, 'ChooseRoom')]");
         private By chkFilterHotelResults = By.XPath("//*[contains(@id, 'StarRatingFilter')]");
 
-        public void filterHotelResults(String noOfStars)
+        public void filterHotelResults(int[] filterCriteria)
         {
-            IReadOnlyCollection<IWebElement> filterConditions = driver.FindElements(chkFilterHotelResults);
-            filterConditions.ElementAt(1).Click();
+            IReadOnlyCollection<IWebElement> elements = getWebElements(chkFilterHotelResults);
+            for (int i = 0; i < elements.Count(); i++)
+            {
+
+                int elementValue = int.Parse(elements.ElementAt(i).GetAttribute("Value"));
+                if (FilterSearch(filterCriteria, elementValue))
+                {
+                    moveToElementAndClick(elements.ElementAt(i));     
+                    
+
+                }
+
+            }
 
 
+        }
 
+        public HotelBookRoomPage chooseRoom()
+        {
+            //IReadOnlyCollection<IWebElement> chooseRooms = driver.FindElements(btnChooseRoom);
+            IReadOnlyCollection<IWebElement> chooseRooms = getWebElements(btnChooseRoom);
+            Console.WriteLine("Rooms" + chooseRooms.Count());
+            Click(chooseRooms.ElementAt(1));
+            //chooseRooms.ElementAt(1).Click();
+           // moveToElementAndClick(chooseRooms.ElementAt(1));
+            return new HotelBookRoomPage();
         }
 
         public void sortHotelSearch(String filterCriteria)
@@ -56,14 +77,7 @@ namespace UIAutomationForVacationDirect.Pages
                     break;
             }
 
-        }
-
-        public HotelBookRoomPage chooseRoom()
-        {
-            IReadOnlyCollection<IWebElement> chooseRooms = driver.FindElements(btnChooseRoom);
-            chooseRooms.ElementAt(1).Click();
-            return new HotelBookRoomPage();
-        }
+        }     
 
 
         enum FilterCriteria

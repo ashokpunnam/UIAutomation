@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using UIAutomationFramework.Base;
 
@@ -31,21 +32,19 @@ namespace UIAutomationForVacationDirect.Pages
         {
             sendKeys(byDestination, city);
             Click(byCheckInDate);
-            getWebElementsAndSendKeys(byDatePicker, checkInDate);
+            IReadOnlyCollection<IWebElement> lstElementsFromDate = getWebElements(byDatePicker);
+            Click(lstElementsFromDate.ElementAt(checkInDate));
+
+            //Thread.Sleep(1000);
             Click(byCheckoutDate);
-            getWebElementsAndSendKeys(byDatePicker, checkOutDate);
-            driver.FindElement(btnhotelSearchButton).Click();
+            IReadOnlyCollection<IWebElement> lstElementsToDate = getWebElements(byDatePicker);
+            //getWebElements(byDatePicker);
+            Click(lstElementsToDate.ElementAt(checkOutDate));
+
+            Click(btnhotelSearchButton);
             return new HotelSearchResultsPage();
 
 
-            /*IWebElement elmDestination = driver.FindElement(txtDestination);
-            elmDestination.SendKeys(city);
-            elmDestination.SendKeys(Keys.ArrowDown);
-            elmDestination.SendKeys(Keys.Enter);
-            js.ExecuteScript("document.getElementById('inputCheckInDate').setAttribute('value','07/08/20')");
-            js.ExecuteScript("document.getElementById('inputCheckOutDate').setAttribute('value','08/07/20')");
-            driver.FindElement(btnhotelSearchButton).Click();
-            return new HotelSearchResultsPage();*/
         }
 
 
