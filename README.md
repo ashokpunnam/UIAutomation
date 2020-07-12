@@ -15,7 +15,7 @@ Element interactions like send data to an element, get data from an element, but
 
 # Getting started
 To run the tests:
-1. Install Visual Studio 
+1. Install Visual Studio and then .Net Desktop Development package
 2. Install NuGet (package manager)
 3. Connect to github project (View > Team Explorer)
 4. clone repository: https://github.com/ashokpunnam/UIAutomation.git
