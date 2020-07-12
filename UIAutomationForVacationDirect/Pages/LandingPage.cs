@@ -8,7 +8,7 @@ using UIAutomationFramework.Base;
 
 namespace UIAutomationForVacationDirect.Pages
 {
-    class LandingPage:BasePage
+    public class LandingPage:BasePage
     {
        // private IWebDriver driver;
         public LandingPage():base()
@@ -18,10 +18,10 @@ namespace UIAutomationForVacationDirect.Pages
 
         private By btnHotel = By.XPath("//*[@id='SearchWidgetWrapper']/section/div/ul/li[2]/button");
 
-        public void clickHotel()
+        public HotelSearchPage clickHotel()
         {
             driver.FindElement(btnHotel).Click();
-
+            return new HotelSearchPage();
 
         }
     }

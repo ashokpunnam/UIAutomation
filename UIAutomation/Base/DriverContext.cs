@@ -7,18 +7,20 @@ namespace UIAutomationFramework.Base
 {
    public static class DriverContext
     {
-        private static IWebDriver driver;
+        private static IWebDriver _driver;
 
         public static IWebDriver Driver
         {
             get
             {
-                return driver;
+                return _driver;
             }
             set
             {
-                driver = value;
+                _driver = value;
             }
         }
+
+        public static Browser Browser { get; set; }
     }
 }
