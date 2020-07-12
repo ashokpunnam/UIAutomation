@@ -27,13 +27,14 @@ namespace UIAutomationFramework.Base
            // wait = new WebDriverWait(driver, TimeSpan.FromSeconds(50));
            
         }
+       
 
-        public void TearDown()
+      /*  public void TearDown()
         {
             
             driver.Quit();
         }
-
+        */
         public void sendKeys(By by, string value)        
         {
             //Thread.Sleep(2000);
@@ -41,11 +42,26 @@ namespace UIAutomationFramework.Base
             //IWebElement element = driver.FindElement(by);
             element.Clear();
             element.SendKeys(value);
-            //Thread.Sleep(2000);
+            Thread.Sleep(1000);
             element.SendKeys(Keys.Enter);
-            //Thread.Sleep(2000);
+            Thread.Sleep(1000);
             element.SendKeys(Keys.Tab);
         }
+
+        public string getAttributeValue(By by, string attributeType)
+        {
+            IWebElement element = waitForElementDisplayed(by);
+            return element.GetAttribute(attributeType);
+
+        }
+        public string GetText(By by)
+        {
+            IWebElement element = waitForElementDisplayed(by);
+            return element.Text;
+
+        }
+
+
 
         public void Click(IWebElement element)
         {
@@ -61,10 +77,10 @@ namespace UIAutomationFramework.Base
             //driver.FindElement(by).Click();
         }
 
-        public Boolean FilterSearch(int[] filterCriteria, int value)
+        public Boolean FilterSearch(List<int> filterCriteria, int value)
         {
             //Thread.Sleep(2000);
-            for (int i = 0; i < filterCriteria.Length; i++)
+            for (int i = 0; i < filterCriteria.Count(); i++)
             {
                 if (value == filterCriteria[i])
                 {

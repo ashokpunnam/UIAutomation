@@ -28,8 +28,7 @@ namespace UIAutomationFramework.Base
             //LogHelpers.CreateLogFile();
 
             //Open Browser
-            OpenBrowser(Browser);
-            NavigateSite();
+            OpenBrowser(Browser);           
             //LogHelpers.Write("Initialized framework");
 
         }
@@ -51,6 +50,13 @@ namespace UIAutomationFramework.Base
                     DriverContext.Browser = new Browser(DriverContext.Driver);
                     break;
             }
+
+        }
+
+        public void CloseBrowser()
+        {
+            DriverContext.Driver.Close();
+            DriverContext.Driver.Quit();
 
         }
 

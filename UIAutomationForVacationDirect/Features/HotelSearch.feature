@@ -11,14 +11,13 @@ Background:
 Scenario: Search for Hotels in a city for dates provided by user and filer the search by star rating and see available rooms
 	Given I have navigated to the application
 	And I click on Hotel button 
-	And I enter city, future check in date, check out date and click on search for hotels button
-	| city          | checkInDay | checkOutDay |
-	| New York City | 0          | 29          |	
-	Then Hotel Search Results are displayed
-	Then I Filter Hotel Search Results based on Star Rating 
-	| starRating |
-	| 5          |
-	| 4          |
+	And I enter city: '<city>', future check in date: '<checkInDay>', check out date: '<checkOutDay>' and click on search for hotels button	
+	Then Hotel Search Results are displayed	
+	Then I Filter Hotel Search Results based on Star Rating: '<starRating>'
 	Then I selected a hotel from the Search Results
 	Then I see available rooms
+
+	Examples: 
+	| city          | checkInDay | checkOutDay | starRating |
+	| New York City | 0          | 29          | 5	        |
 

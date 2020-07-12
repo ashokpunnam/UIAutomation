@@ -23,6 +23,8 @@ namespace UIAutomationForVacationDirect.Pages
         private By btnChooseRoom = By.XPath("//*[contains(@id, 'ChooseRoom')]");
         private By chkFilterHotelResults = By.XPath("//*[contains(@id, 'StarRatingFilter')]");
 
+        IReadOnlyCollection<IWebElement> ListOfHotels;
+
         public void filterHotelResults(List<int> filterCriteria)
         {
             IReadOnlyCollection<IWebElement> elements = getWebElements(chkFilterHotelResults);
@@ -42,15 +44,28 @@ namespace UIAutomationForVacationDirect.Pages
 
         }
 
+        public void GetListOfHotels()
+        {
+            ListOfHotels = driver.FindElements(btnChooseRoom);
+        }
+
         public HotelBookRoomPage chooseRoom()
         {
             //IReadOnlyCollection<IWebElement> chooseRooms = driver.FindElements(btnChooseRoom);
-            IReadOnlyCollection<IWebElement> chooseRooms = getWebElements(btnChooseRoom);
-            Console.WriteLine("Rooms" + chooseRooms.Count());
-            Click(chooseRooms.ElementAt(1));
+            // IReadOnlyCollection<IWebElement> chooseRooms = getWebElements(btnChooseRoom);
+            //Console.WriteLine("Rooms" + chooseRooms.Count());
+            GetListOfHotels();
+            Click(ListOfHotels.ElementAt(1));
             //chooseRooms.ElementAt(1).Click();
            // moveToElementAndClick(chooseRooms.ElementAt(1));
             return new HotelBookRoomPage();
+        }
+        public int ListOfSearchResults()
+        {
+            GetListOfHotels();            
+            return ListOfHotels.Count();
+
+
         }
 
         public void sortHotelSearch(String filterCriteria)

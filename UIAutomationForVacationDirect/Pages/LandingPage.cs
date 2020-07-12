@@ -17,6 +17,12 @@ namespace UIAutomationForVacationDirect.Pages
         }
 
         private By btnHotel = By.XPath("//*[@id='SearchWidgetWrapper']/section/div/ul/li[2]/button");
+        private By homeIcon = By.XPath("//*[@id='4722']/div[2]/div[1]/header/div[2]/a/img");
+
+        public string getHomePageIcon()
+        {
+            return getAttributeValue(homeIcon, "alt");
+        }
 
         public HotelSearchPage clickHotel()
         {
