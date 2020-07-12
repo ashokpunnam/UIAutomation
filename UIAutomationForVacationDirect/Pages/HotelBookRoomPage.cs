@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UIAutomationFramework.Base;
+using UIAutomationFramework.Wrappers;
 
 namespace UIAutomationForVacationDirect.Pages
 {
@@ -22,7 +23,7 @@ namespace UIAutomationForVacationDirect.Pages
 
         public int listOfAvailableRooms()
         {
-            IReadOnlyCollection<IWebElement> listOfAvailableRooms = getWebElements(btnBookThisRoom);
+            IReadOnlyCollection<IWebElement> listOfAvailableRooms = WebElementWrapper.getWebElements(btnBookThisRoom);
             //Console.WriteLine("Rooms are available for selected hotel :"+(listOfAvailableRooms.Count()));
             return listOfAvailableRooms.Count();
         }

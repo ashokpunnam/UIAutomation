@@ -9,13 +9,13 @@ namespace UIAutomationFramework.Base
     {
         public BasePage CurrentPage { get; set; }
 
-        private IWebDriver _driver { get; set; }
+        private IWebDriver driver { get; set; }
 
         protected TPage GetInstance<TPage>() where TPage : BasePage, new()
         {
             TPage pageInstance = new TPage()
             {
-                _driver = DriverContext.Driver
+                driver = DriverContext.Driver
             };
 
             //PageFactory.InitElements(DriverContext.Driver, pageInstance);

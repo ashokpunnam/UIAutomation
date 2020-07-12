@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using UIAutomationFramework.Base;
+using UIAutomationFramework.Wrappers;
 
 namespace UIAutomationForVacationDirect.Pages
 {
@@ -30,18 +31,18 @@ namespace UIAutomationForVacationDirect.Pages
 
         public HotelSearchResultsPage SearchForHotels(string city, int checkInDate, int checkOutDate) 
         {
-            sendKeys(byDestination, city);
-            Click(byCheckInDate);
-            IReadOnlyCollection<IWebElement> lstElementsFromDate = getWebElements(byDatePicker);
-            Click(lstElementsFromDate.ElementAt(checkInDate));
+            WebElementWrapper.sendKeys(byDestination, city);
+            WebElementWrapper.Click(byCheckInDate);
+            IReadOnlyCollection<IWebElement> lstElementsFromDate = WebElementWrapper.getWebElements(byDatePicker);
+            WebElementWrapper.Click(lstElementsFromDate.ElementAt(checkInDate));
 
             //Thread.Sleep(1000);
-            Click(byCheckoutDate);
-            IReadOnlyCollection<IWebElement> lstElementsToDate = getWebElements(byDatePicker);
+            WebElementWrapper.Click(byCheckoutDate);
+            IReadOnlyCollection<IWebElement> lstElementsToDate = WebElementWrapper.getWebElements(byDatePicker);
             //getWebElements(byDatePicker);
-            Click(lstElementsToDate.ElementAt(checkOutDate));
+            WebElementWrapper.Click(lstElementsToDate.ElementAt(checkOutDate));
 
-            Click(btnhotelSearchButton);
+            WebElementWrapper.Click(btnhotelSearchButton);
             return new HotelSearchResultsPage();
 
 

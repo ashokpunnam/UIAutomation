@@ -96,7 +96,7 @@ namespace UIAutomationForVacationDirect.StepDefinitions
             //ScenarioContext.Current.Pending();
             if (hotelBookRoomPage.RoomsNotAvailable())
             {
-                Console.WriteLine("No Rooms available for selected hotel. Please select different hotel");
+                Console.WriteLine("No Rooms available for the selected hotel. Please select different hotel");
             }
             else
             {
