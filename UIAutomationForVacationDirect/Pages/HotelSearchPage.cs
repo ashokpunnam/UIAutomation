@@ -9,7 +9,7 @@ using UIAutomationFramework.Base;
 
 namespace UIAutomationForVacationDirect.Pages
 {
-    class HotelSearchPage:BasePage
+    public class HotelSearchPage:BasePage
     {
         public HotelSearchPage() : base()
         {

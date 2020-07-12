@@ -8,7 +8,7 @@ using UIAutomationFramework.Base;
 
 namespace UIAutomationForVacationDirect.Pages
 {
-    class HotelSearchResultsPage : BasePage
+   public class HotelSearchResultsPage : BasePage
     {
         public HotelSearchResultsPage() : base()
         {
@@ -23,7 +23,7 @@ namespace UIAutomationForVacationDirect.Pages
         private By btnChooseRoom = By.XPath("//*[contains(@id, 'ChooseRoom')]");
         private By chkFilterHotelResults = By.XPath("//*[contains(@id, 'StarRatingFilter')]");
 
-        public void filterHotelResults(int[] filterCriteria)
+        public void filterHotelResults(List<int> filterCriteria)
         {
             IReadOnlyCollection<IWebElement> elements = getWebElements(chkFilterHotelResults);
             for (int i = 0; i < elements.Count(); i++)

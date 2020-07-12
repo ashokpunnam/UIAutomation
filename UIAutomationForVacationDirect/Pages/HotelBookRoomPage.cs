@@ -8,7 +8,7 @@ using UIAutomationFramework.Base;
 
 namespace UIAutomationForVacationDirect.Pages
 {
-    class HotelBookRoomPage:BasePage
+   public class HotelBookRoomPage:BasePage
     {
         public HotelBookRoomPage() : base()
         {
