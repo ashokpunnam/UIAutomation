@@ -3,7 +3,7 @@ This solution demonstrates automated testing of web pages with Selenium and C#.N
 Three tests are included that run tests on the website 'http://www.vacationsdirect.com', the tests can be executed on three browsers: Firefox and chrome by passing browser type from the calling test case/feature file.
 To run the Selenium tests, download the solution and run the feature files using specflow MSTest Test runner. All selenium and specflow dependencies are included in the solution.
 Below are the dependancies used for developing this solution:
--Selenium Web Driver
+- Selenium Web Driver
 - Specflow
 - NUnit
 - MSTest
