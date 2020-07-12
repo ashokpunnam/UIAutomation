@@ -105,18 +105,20 @@ namespace UIAutomationForVacationDirect.Features
 #line hidden
         }
         
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Search for Hotels in a city for dates provided by user and filer the search by st" +
-            "ar rating and see available rooms")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Search for hotels and see available rooms after selecting a hotel")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("acceptanceTest")]
-        public virtual void SearchForHotelsInACityForDatesProvidedByUserAndFilerTheSearchByStarRatingAndSeeAvailableRooms()
+        public virtual void SearchForHotelsInACityForDatesProvidedByUser(string city, string checkInDay, string checkOutDay, string[] exampleTags)
         {
-            string[] tagsOfScenario = new string[] {
+            string[] @__tags = new string[] {
                     "acceptanceTest"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search for Hotels in a city for dates provided by user and filer the search by st" +
-                    "ar rating and see available rooms", null, tagsOfScenario, argumentsOfScenario);
+            argumentsOfScenario.Add("city", city);
+            argumentsOfScenario.Add("checkInDay", checkInDay);
+            argumentsOfScenario.Add("checkOutDay", checkOutDay);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search for Hotels in a city for dates provided by user", null, tagsOfScenario, argumentsOfScenario);
 #line 11
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -146,38 +148,188 @@ this.FeatureBackground();
 #line 13
  testRunner.And("I click on Hotel button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                            "city",
-                            "checkInDay",
-                            "checkOutDay"});
-                table1.AddRow(new string[] {
-                            "New York City",
-                            "0",
-                            "29"});
 #line 14
- testRunner.And("I enter city, future check in date, check out date and click on search for hotels" +
-                        " button", ((string)(null)), table1, "And ");
+ testRunner.And(string.Format("I enter city: \'{0}\', future check in date: \'{1}\', check out date: \'{2}\' and click" +
+                            " on search for hotels button", city, checkInDay, checkOutDay), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 17
+#line 15
  testRunner.Then("Hotel Search Results are displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                            "starRating"});
-                table2.AddRow(new string[] {
-                            "5"});
-                table2.AddRow(new string[] {
-                            "4"});
-#line 18
- testRunner.Then("I Filter Hotel Search Results based on Star Rating", ((string)(null)), table2, "Then ");
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Search for Hotels in a city for dates provided by user: New York City")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Search for hotels and see available rooms after selecting a hotel")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("acceptanceTest")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "New York City")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:city", "New York City")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:checkInDay", "0")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:checkOutDay", "29")]
+        public virtual void SearchForHotelsInACityForDatesProvidedByUser_NewYorkCity()
+        {
+#line 11
+this.SearchForHotelsInACityForDatesProvidedByUser("New York City", "0", "29", ((string[])(null)));
+#line hidden
+        }
+        
+        public virtual void SearchForHotelsInACityForDatesProvidedByUserAndFilterHotelSearchResults(string city, string checkInDay, string checkOutDay, string starRating, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "acceptanceTest"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("city", city);
+            argumentsOfScenario.Add("checkInDay", checkInDay);
+            argumentsOfScenario.Add("checkOutDay", checkOutDay);
+            argumentsOfScenario.Add("starRating", starRating);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search for Hotels in a city for dates provided by user and filter hotel search re" +
+                    "sults", null, tagsOfScenario, argumentsOfScenario);
+#line 21
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 6
+this.FeatureBackground();
 #line hidden
 #line 22
- testRunner.Then("I selected a hotel from the Search Results", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Given("I have navigated to the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 23
+ testRunner.And("I click on Hotel button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 24
+ testRunner.And(string.Format("I enter city: \'{0}\', future check in date: \'{1}\', check out date: \'{2}\' and click" +
+                            " on search for hotels button", city, checkInDay, checkOutDay), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 25
+ testRunner.Then("Hotel Search Results are displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 26
+ testRunner.Then(string.Format("I Filter Hotel Search Results based on Star Rating: \'{0}\'", starRating), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Search for Hotels in a city for dates provided by user and filter hotel search re" +
+            "sults: New York City")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Search for hotels and see available rooms after selecting a hotel")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("acceptanceTest")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "New York City")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:city", "New York City")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:checkInDay", "0")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:checkOutDay", "29")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:starRating", "5")]
+        public virtual void SearchForHotelsInACityForDatesProvidedByUserAndFilterHotelSearchResults_NewYorkCity()
+        {
+#line 21
+this.SearchForHotelsInACityForDatesProvidedByUserAndFilterHotelSearchResults("New York City", "0", "29", "5", ((string[])(null)));
+#line hidden
+        }
+        
+        public virtual void SearchForHotelsInACityForDatesProvidedByUserAndFilerTheSearchByStarRatingAndSeeAvailableRooms(string city, string checkInDay, string checkOutDay, string starRating, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "acceptanceTest"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("city", city);
+            argumentsOfScenario.Add("checkInDay", checkInDay);
+            argumentsOfScenario.Add("checkOutDay", checkOutDay);
+            argumentsOfScenario.Add("starRating", starRating);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search for Hotels in a city for dates provided by user and filer the search by st" +
+                    "ar rating and see available rooms", null, tagsOfScenario, argumentsOfScenario);
+#line 32
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 6
+this.FeatureBackground();
+#line hidden
+#line 33
+ testRunner.Given("I have navigated to the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 34
+ testRunner.And("I click on Hotel button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 35
+ testRunner.And(string.Format("I enter city: \'{0}\', future check in date: \'{1}\', check out date: \'{2}\' and click" +
+                            " on search for hotels button", city, checkInDay, checkOutDay), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 36
+ testRunner.Then("Hotel Search Results are displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 37
+ testRunner.Then(string.Format("I Filter Hotel Search Results based on Star Rating: \'{0}\'", starRating), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 38
+ testRunner.Then("I selected a hotel from the Search Results", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 39
  testRunner.Then("I see available rooms", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Search for Hotels in a city for dates provided by user and filer the search by st" +
+            "ar rating and see available rooms: New York City")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Search for hotels and see available rooms after selecting a hotel")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("acceptanceTest")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "New York City")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:city", "New York City")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:checkInDay", "0")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:checkOutDay", "29")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:starRating", "5")]
+        public virtual void SearchForHotelsInACityForDatesProvidedByUserAndFilerTheSearchByStarRatingAndSeeAvailableRooms_NewYorkCity()
+        {
+#line 32
+this.SearchForHotelsInACityForDatesProvidedByUserAndFilerTheSearchByStarRatingAndSeeAvailableRooms("New York City", "0", "29", "5", ((string[])(null)));
+#line hidden
         }
     }
 }
