@@ -18,16 +18,16 @@ To run the tests:
 3. Connect to github project (View > Team Explorer)
 4. clone repository: https://github.com/ashokpunnam/UIAutomation.git
 5. Use NuGet (Project > Manage NuGet packages) to install below packages: 
-  Selenium Web Driver
-  NUnit   
-  NUnit3TestAdaptor
-  SpecFlow
-  SpecFlow.Assist.Dynamic
-  SpecFlow.MSTest
-  SpecFlow.Tools.MsBuild.Generation
-  Cucumber.Messages
-  Gherkin
-  Microsoft.CodeCoverage
+  - Selenium Web Driver
+  - NUnit   
+  - NUnit3TestAdaptor
+  - SpecFlow
+  - SpecFlow.Assist.Dynamic
+  - SpecFlow.MSTest
+  - SpecFlow.Tools.MsBuild.Generation
+  - Cucumber.Messages
+  - Gherkin
+  - Microsoft.CodeCoverage
  
 
 The tests are structured according to the Page Object Pattern, Web Elements and element operations are binded together in a file and exposed as methods. Out of the box Selenium supports locating elements using the element id or an xpath selector etc.
