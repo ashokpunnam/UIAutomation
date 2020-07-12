@@ -7,11 +7,9 @@ Element interactions like send data to an element, get data from an element, but
 # Uses:
 - SpecFlow (BDD)
 - Selenium (WebDriver)
-- NUnit 2.x
-- specflow-report-templates (for reporting)
-- pickles (documentation generator for features and scenarios)
+- NUnit 
 - utilises Page Object Model pattern
-- takes screenshots on failure of web tests
+
 
 # Getting started
 To run the tests:
@@ -19,8 +17,9 @@ To run the tests:
 2. Install NuGet (package manager)
 3. Connect to github project (View > Team Explorer)
 4. clone repository: https://github.com/ashokpunnam/UIAutomation.git
-5. Use NuGet (Project > Manage NuGet packages) to install below packages: 
+5. Use NuGet (Project > Manage NuGet packages) to install below packages if they are not downloaded from the project. Below packages are installed automatically when solution is cloned from git.
   - Selenium Web Driver
+  - Selenium Chrome Driver
   - NUnit   
   - NUnit3TestAdaptor
   - SpecFlow
@@ -29,8 +28,8 @@ To run the tests:
   - SpecFlow.Tools.MsBuild.Generation
   - Cucumber.Messages
   - Gherkin
-  - Microsoft.CodeCoverage
- 6. Create folder 'dependencies'. Download chrome, IE, Edge drivers directly here via NuGet packages
+  - Microsoft.CodeCoverage  
+ 6. Chrome and firefox drivers are downlaoded to dependancies and prvided as part of the solution 
    - Right click on the chromedriver.exe and select Properties
    - Ensure the Build Action Content is selected Copy to Output Directory Copy Always has been selected.
    - This will ensure that chromedriver.exe is always in the folder of the running assembly so it can be used.
@@ -38,4 +37,8 @@ To run the tests:
  8. In Visual Studio, select Tools > Extensions and Updates > Online. Install SpecFlow extension and restart VS
  9. Install SpecRun (NuGet) for enhanced reporting and IDE intellisense, formatting etc.
  
-Reporting
+Below are the to do items and can be added to the framework:
+  1. Log Utility to log test execution for tracing and debugging
+  2. Reporting utility to customize and generate test execution and summary report
+  3. Generic page to handle page objects in test cases/step definitions in effiecient and cleaner way
+  4. 
