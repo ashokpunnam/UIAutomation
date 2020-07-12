@@ -16,15 +16,19 @@ To run the tests:
 1. Install Visual Studio (Enterprise 2019)
 2. Install NuGet (package manager)
 3. Connect to github project (View > Team Explorer)
-4. clone 
-
-
-download the solution and run the feature files using specflow MSTest Test runner. All selenium and specflow dependencies are included in the solution.
-Below are the dependancies used for developing this solution:
-- Selenium Web Driver
-- Specflow
-- NUnit
-- MSTest
+4. clone repository: https://github.com/ashokpunnam/UIAutomation.git
+5. Use NuGet (Project > Manage NuGet packages) to install below packages: 
+  Selenium Web Driver
+  NUnit   
+  NUnit3TestAdaptor
+  SpecFlow
+  SpecFlow.Assist.Dynamic
+  SpecFlow.MSTest
+  SpecFlow.Tools.MsBuild.Generation
+  Cucumber.Messages
+  Gherkin
+  Microsoft.CodeCoverage
+ 
 
 The tests are structured according to the Page Object Pattern, Web Elements and element operations are binded together in a file and exposed as methods. Out of the box Selenium supports locating elements using the element id or an xpath selector etc.
 Element interactions like send data to an element, get data from an element, button clicks, wait for an element to be displayed on a page, producing driver context for executing test cases etc. are defined and produced from framework components.
