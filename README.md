@@ -20,6 +20,7 @@ To run the tests:
 5. Use NuGet (Project > Manage NuGet packages) to install below packages if they are not downloaded from the project. Below packages are installed automatically when solution is cloned from git.
   - Selenium Web Driver
   - Selenium Chrome Driver
+  - Selenium Firefox Driver
   - NUnit   
   - NUnit3TestAdaptor
   - SpecFlow
@@ -29,13 +30,9 @@ To run the tests:
   - Cucumber.Messages
   - Gherkin
   - Microsoft.CodeCoverage  
- 6. Chrome and firefox drivers are downlaoded to dependancies and prvided as part of the solution 
-   - Right click on the chromedriver.exe and select Properties
-   - Ensure the Build Action Content is selected Copy to Output Directory Copy Always has been selected.
-   - This will ensure that chromedriver.exe is always in the folder of the running assembly so it can be used.
- 7. As part of the NuGet installs, you will notice that an App.config file was generated in the structure of the project. -- If we chosen to use MSTest instead of NUnit as a         test runner, we need to update this file.
- 8. In Visual Studio, select Tools > Extensions and Updates > Online. Install SpecFlow extension and restart VS
- 9. Install SpecRun (NuGet) for enhanced reporting and IDE intellisense, formatting etc.
+ 6. As part of the NuGet installs, you will notice that an App.config file was generated in the structure of the project. -- If we chosen to use MSTest instead of NUnit as a         test runner, we need to update this file.
+ 7. In Visual Studio, select Tools > Extensions and Updates > Online. Install SpecFlow extension and restart VS
+ 8. Install SpecRun (NuGet) for enhanced reporting and IDE intellisense, formatting etc.
  
 Below are the to do items and can be added to the framework:
   1. Log Utility to log test execution for tracing and debugging
