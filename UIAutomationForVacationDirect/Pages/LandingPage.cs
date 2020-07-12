@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UIAutomationFramework.Base;
+using UIAutomationFramework.Wrappers;
 
 namespace UIAutomationForVacationDirect.Pages
 {
@@ -21,12 +22,13 @@ namespace UIAutomationForVacationDirect.Pages
 
         public string getHomePageIcon()
         {
-            return getAttributeValue(homeIcon, "alt");
+            return WebElementWrapper.getAttributeValue(homeIcon, "alt");
         }
 
         public HotelSearchPage clickHotel()
         {
-            driver.FindElement(btnHotel).Click();
+            //driver.FindElement(btnHotel).Click();
+            WebElementWrapper.Click(btnHotel);
             return new HotelSearchPage();
 
         }
