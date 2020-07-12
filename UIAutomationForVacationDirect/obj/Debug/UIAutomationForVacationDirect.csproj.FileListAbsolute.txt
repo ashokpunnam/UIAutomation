@@ -18,7 +18,6 @@ C:\Users\972797\source\repos\UIAutomation\UIAutomationForVacationDirect\bin\Debu
 C:\Users\972797\source\repos\UIAutomation\UIAutomationForVacationDirect\bin\Debug\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 C:\Users\972797\source\repos\UIAutomation\UIAutomationForVacationDirect\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
 C:\Users\972797\source\repos\UIAutomation\UIAutomationForVacationDirect\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
-C:\Users\972797\source\repos\UIAutomation\UIAutomationForVacationDirect\bin\Debug\SeleniumExtras.PageObjects.dll
 C:\Users\972797\source\repos\UIAutomation\UIAutomationForVacationDirect\bin\Debug\SpecFlow.Assist.Dynamic.dll
 C:\Users\972797\source\repos\UIAutomation\UIAutomationForVacationDirect\bin\Debug\System.Buffers.dll
 C:\Users\972797\source\repos\UIAutomation\UIAutomationForVacationDirect\bin\Debug\System.Memory.dll
@@ -31,7 +30,6 @@ C:\Users\972797\source\repos\UIAutomation\UIAutomationForVacationDirect\bin\Debu
 C:\Users\972797\source\repos\UIAutomation\UIAutomationForVacationDirect\bin\Debug\Utf8Json.dll
 C:\Users\972797\source\repos\UIAutomation\UIAutomationForVacationDirect\bin\Debug\Validation.dll
 C:\Users\972797\source\repos\UIAutomation\UIAutomationForVacationDirect\bin\Debug\WebDriver.dll
-C:\Users\972797\source\repos\UIAutomation\UIAutomationForVacationDirect\bin\Debug\WebDriver.Support.dll
 C:\Users\972797\source\repos\UIAutomation\UIAutomationForVacationDirect\bin\Debug\xunit.abstractions.dll
 C:\Users\972797\source\repos\UIAutomation\UIAutomationForVacationDirect\bin\Debug\xunit.core.dll
 C:\Users\972797\source\repos\UIAutomation\UIAutomationForVacationDirect\bin\Debug\xunit.execution.desktop.dll
@@ -54,7 +52,6 @@ C:\Users\972797\source\repos\UIAutomation\UIAutomationForVacationDirect\bin\Debu
 C:\Users\972797\source\repos\UIAutomation\UIAutomationForVacationDirect\bin\Debug\Utf8Json.xml
 C:\Users\972797\source\repos\UIAutomation\UIAutomationForVacationDirect\bin\Debug\Validation.xml
 C:\Users\972797\source\repos\UIAutomation\UIAutomationForVacationDirect\bin\Debug\WebDriver.xml
-C:\Users\972797\source\repos\UIAutomation\UIAutomationForVacationDirect\bin\Debug\WebDriver.Support.xml
 C:\Users\972797\source\repos\UIAutomation\UIAutomationForVacationDirect\bin\Debug\xunit.abstractions.xml
 C:\Users\972797\source\repos\UIAutomation\UIAutomationForVacationDirect\bin\Debug\xunit.core.xml
 C:\Users\972797\source\repos\UIAutomation\UIAutomationForVacationDirect\bin\Debug\xunit.execution.desktop.xml

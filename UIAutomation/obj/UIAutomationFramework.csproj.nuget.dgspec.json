@@ -38,9 +38,9 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
-            "DotNetSeleniumExtras.PageObjects.Core": {
+            "BoDi": {
               "target": "Package",
-              "version": "[3.12.0, )"
+              "version": "[1.4.1, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -48,13 +48,25 @@
               "version": "[2.0.3, )",
               "autoReferenced": true
             },
-            "Selenium.Support": {
+            "NUnit": {
               "target": "Package",
-              "version": "[3.141.0, )"
+              "version": "[3.12.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[3.17.0, )"
             },
             "Selenium.WebDriver": {
               "target": "Package",
               "version": "[3.141.0, )"
+            },
+            "SpecFlow": {
+              "target": "Package",
+              "version": "[3.3.30, )"
+            },
+            "SpecFlow.Tools.MsBuild.Generation": {
+              "target": "Package",
+              "version": "[3.3.30, )"
             }
           },
           "imports": [
