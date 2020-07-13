@@ -18,17 +18,17 @@ To run the tests:
 3. Connect to github project (View > Team Explorer)
 4. clone repository: https://github.com/ashokpunnam/UIAutomation.git
 5. Use NuGet (Project > Manage NuGet packages) to install below packages if they are not already downloaded from github while cloning the project:
-  - Selenium Web Driver
-  - Selenium Chrome Driver
-  - Selenium Firefox Driver
-  - NUnit   
-  - NUnit3TestAdaptor
-  - SpecFlow
-  - SpecFlow.Assist.Dynamic
-  - SpecFlow.MSTest
-  - SpecFlow.Tools.MsBuild.Generation   
-  - Microsoft.CodeCoverage  
-  - SpecRun
+    - Selenium Web Driver
+    - Selenium Chrome Driver
+    - Selenium Firefox Driver
+    - NUnit   
+    - NUnit3TestAdaptor
+    - SpecFlow
+    - SpecFlow.Assist.Dynamic
+    - SpecFlow.MSTest
+    - SpecFlow.Tools.MsBuild.Generation   
+    - Microsoft.CodeCoverage  
+    - SpecRun
  6. In Visual Studio, select Tools > Extensions and Updates > Online. Install SpecFlow extension and restart VS 
  7. Click on Build-->Build Solutuon
  8. Once Build is successful, click on Test and open Test explorer
@@ -64,3 +64,4 @@ To run the tests:
   6. Code Review and Refactoring
   7. Configuration Readers and Settings to control environment variables in an efficient way
   8. Adding screenshots for the failed steps/test cases
+  9. Tighten Driver synchronization and waits
