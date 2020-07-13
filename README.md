@@ -36,7 +36,7 @@ To run the tests:
  8. Once Build is successful, click on Test and open Test explorer
  9. Run all tests and watch execution flow
   
-# Points cosnidered while developing the solution:
+# Points considered while developing the solution:
   1.  Create seperate projects for defining and developing framework components and Test components
   2. Create Hooks and Base paages to communicate between Framework components and test components
   3. Develop framework in such a way that it can be easily manintainable, reusable and scalable
