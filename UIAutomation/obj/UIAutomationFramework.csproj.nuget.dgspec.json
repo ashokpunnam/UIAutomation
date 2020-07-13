@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\972797\\source\\repos\\UIAutomation\\UIAutomation\\UIAutomationFramework.csproj": {}
+    "D:\\GITPub_Projects\\UIAutomation\\UIAutomation\\UIAutomationFramework.csproj": {}
   },
   "projects": {
-    "C:\\Users\\972797\\source\\repos\\UIAutomation\\UIAutomation\\UIAutomationFramework.csproj": {
+    "D:\\GITPub_Projects\\UIAutomation\\UIAutomation\\UIAutomationFramework.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\972797\\source\\repos\\UIAutomation\\UIAutomation\\UIAutomationFramework.csproj",
+        "projectUniqueName": "D:\\GITPub_Projects\\UIAutomation\\UIAutomation\\UIAutomationFramework.csproj",
         "projectName": "UIAutomationFramework",
-        "projectPath": "C:\\Users\\972797\\source\\repos\\UIAutomation\\UIAutomation\\UIAutomationFramework.csproj",
+        "projectPath": "D:\\GITPub_Projects\\UIAutomation\\UIAutomation\\UIAutomationFramework.csproj",
         "packagesPath": "C:\\Users\\972797\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\972797\\source\\repos\\UIAutomation\\UIAutomation\\obj\\",
+        "outputPath": "D:\\GITPub_Projects\\UIAutomation\\UIAutomation\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\972797\\AppData\\Roaming\\NuGet\\NuGet.Config",
