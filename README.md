@@ -32,7 +32,10 @@ To run the tests:
   - Microsoft.CodeCoverage  
   - SpecRun
  6. In Visual Studio, select Tools > Extensions and Updates > Online. Install SpecFlow extension and restart VS 
- 
+ 7. Click on Build-->Build Solutuon
+ 8. Once Build is successful, click on Test and open Test explorer
+ 9. Run all tests and watch execution flow
+  
 # Below Items are considered while developing the solution:
   1.  Create seperate projects for defining and developing framework components and Test components
   2. Create Hooks and Base paages to communicate between Framework components and test components
