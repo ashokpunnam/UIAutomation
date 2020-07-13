@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using UIAutomationFramework.Base;
 using UIAutomationFramework.Wrappers;
@@ -35,7 +36,8 @@ namespace UIAutomationForVacationDirect.Pages
                 int elementValue = int.Parse(elements.ElementAt(i).GetAttribute("Value"));
                 if (WebElementWrapper.FilterSearch(filterCriteria, elementValue))
                 {
-                    WebElementWrapper.MoveToElementAndClick(elements.ElementAt(i));     
+                    WebElementWrapper.MoveToElementAndClick(elements.ElementAt(i));
+                    Thread.Sleep(2000);
                     
 
                 }
@@ -56,7 +58,7 @@ namespace UIAutomationForVacationDirect.Pages
             // IReadOnlyCollection<IWebElement> chooseRooms = getWebElements(btnChooseRoom);
             //Console.WriteLine("Rooms" + chooseRooms.Count());
             GetListOfHotels();
-            WebElementWrapper.Click(ListOfHotels.ElementAt(1));
+            WebElementWrapper.Click(ListOfHotels.ElementAt(0));
             //chooseRooms.ElementAt(1).Click();
            // moveToElementAndClick(chooseRooms.ElementAt(1));
             return new HotelBookRoomPage();
