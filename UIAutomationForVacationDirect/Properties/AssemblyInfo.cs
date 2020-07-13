@@ -5,9 +5,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("UIAutomationForVacationDirect")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("American Airlines")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("UIAutomationForVacationDirect")]
-[assembly: AssemblyCopyright("Copyright © American Airlines 2020")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

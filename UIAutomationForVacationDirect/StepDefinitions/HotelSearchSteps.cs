@@ -46,14 +46,14 @@ namespace UIAutomationForVacationDirect.StepDefinitions
         {
             //ScenarioContext.Current.Pending();
             landingPage = new LandingPage();
-            Assert.AreEqual(landingPage.getHomePageIcon(), "VacationsDirect");
+            Assert.AreEqual(landingPage.GetHomePageIcon(), "VacationsDirect");
         }
 
         [Given(@"I click on Hotel button")]
         public void GivenIClickOnHotelButton()
         {
             //ScenarioContext.Current.Pending();            
-            hotelSearchPage = landingPage.clickHotel();
+            hotelSearchPage = landingPage.ClickHotel();
 
         }
 
@@ -79,7 +79,7 @@ namespace UIAutomationForVacationDirect.StepDefinitions
 
             List<int> listStarRating = new List<int>();
             listStarRating.Add(int.Parse(starRating));
-            hotelSearchResultsPage.filterHotelResults(listStarRating);
+            hotelSearchResultsPage.FilterHotelResults(listStarRating);
 
         }
 
@@ -87,7 +87,7 @@ namespace UIAutomationForVacationDirect.StepDefinitions
         public void ThenISelectedAHotelFromTheSearchResults()
         {
             //ScenarioContext.Current.Pending();
-            hotelBookRoomPage = hotelSearchResultsPage.chooseRoom();
+            hotelBookRoomPage = hotelSearchResultsPage.ChooseRoom();
         }
 
         [Then(@"I see available rooms")]
@@ -100,7 +100,7 @@ namespace UIAutomationForVacationDirect.StepDefinitions
             }
             else
             {
-                Console.WriteLine(hotelBookRoomPage.listOfAvailableRooms()+" Rooms are available for the selected hotel");
+                Console.WriteLine(hotelBookRoomPage.ListOfAvailableRooms()+" Rooms are available for the selected hotel");
             }
         }
 

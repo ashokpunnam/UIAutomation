@@ -10,11 +10,13 @@ using UIAutomationFramework.Base;
 namespace UIAutomationFramework.Wrappers
 {
    public static class WebElementWrapper 
-    {        
-        public static void sendKeys(By by, string value)
+    {   
+
+
+        public static void SendKeys(By by, string value)
         {
 
-            IWebElement element = waitForElementDisplayed(by);
+            IWebElement element = WaitForElementDisplayed(by);
             element.Clear();
             element.SendKeys(value);
             Thread.Sleep(500);
@@ -23,15 +25,15 @@ namespace UIAutomationFramework.Wrappers
             element.SendKeys(Keys.Tab);
         }
 
-        public static string getAttributeValue(By by, string attributeType)
+        public static string GetAttributeValue(By by, string attributeType)
         {
-            IWebElement element = waitForElementDisplayed(by);
+            IWebElement element = WaitForElementDisplayed(by);
             return element.GetAttribute(attributeType);
 
         }
         public static string GetText(By by)
         {
-            IWebElement element = waitForElementDisplayed(by);
+            IWebElement element = WaitForElementDisplayed(by);
             return element.Text;
 
         }
@@ -41,11 +43,11 @@ namespace UIAutomationFramework.Wrappers
         public static void Click(IWebElement element)
         {
 
-            waitForElementDisplayed(element).Click();
+            WaitForElementDisplayed(element).Click();
         }
         public static void Click(By by)
         {
-            waitForElementDisplayed(by).Click();
+            WaitForElementDisplayed(by).Click();
 
         }
 
@@ -61,34 +63,36 @@ namespace UIAutomationFramework.Wrappers
             return false;
 
         }
-        public static IReadOnlyCollection<IWebElement> getWebElements(By by)
+        public static IReadOnlyCollection<IWebElement> GetWebElements(By by)
         {
-            IReadOnlyCollection<IWebElement> lstElements = waitForElementsDisplayed(by);
+            IReadOnlyCollection<IWebElement> lstElements = WaitForElementsDisplayed(by);
             return lstElements;
 
         }
 
-        public static void moveToElementAndClick(IWebElement element)
+        public static void MoveToElementAndClick(IWebElement element)
         {
             Actions actions = new Actions(DriverContext.Driver);
             actions.MoveToElement(element).Click().Perform();
 
         }
 
-        public static void multiCheckBoxSelect(By by, int[] filterCriteria)
+        public static void MultiCheckBoxSelect(By by, int[] filterCriteria)
         {
-            IReadOnlyCollection<IWebElement> filterConditions = waitForElementsDisplayed(by);
+            IReadOnlyCollection<IWebElement> filterConditions = WaitForElementsDisplayed(by);
             foreach (IWebElement element in filterConditions)
             {
-                foreach (int i in filterCriteria)
-                {
-                    moveToElementAndClick(waitForElementDisplayed(element));
-                }
+                //foreach (int i in filterCriteria)
+                //{
+                    MoveToElementAndClick(WaitForElementDisplayed(element));
+                //}
 
             }
         }
+        
+       
 
-        public static IWebElement waitForElementDisplayed(By by)
+        public static IWebElement WaitForElementDisplayed(By by)
         {
             var wait = new DefaultWait<IWebDriver>(DriverContext.Driver);
             wait.Timeout = TimeSpan.FromSeconds(50);
@@ -103,7 +107,7 @@ namespace UIAutomationFramework.Wrappers
 
         }
 
-        public static IWebElement waitForElementDisplayed(IWebElement element)
+        public static IWebElement WaitForElementDisplayed(IWebElement element)
         {
             var wait = new DefaultWait<IWebDriver>(DriverContext.Driver);
             wait.Timeout = TimeSpan.FromSeconds(50);
@@ -118,7 +122,7 @@ namespace UIAutomationFramework.Wrappers
 
         }
 
-        public static IReadOnlyCollection<IWebElement> waitForElementsDisplayed(By by)
+        public static IReadOnlyCollection<IWebElement> WaitForElementsDisplayed(By by)
         {
             var wait = new DefaultWait<IWebDriver>(DriverContext.Driver);
             wait.Timeout = TimeSpan.FromSeconds(50);

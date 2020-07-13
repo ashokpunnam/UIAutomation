@@ -16,14 +16,14 @@ namespace UIAutomationForVacationDirect.Pages
 
         }
 
-        private By btnBookThisRoom = By.XPath("//*[contains(@id, 'description-hotelroom')]");
-        private By bookRoomException = By.XPath("//*[@id='HotelResultContent']/div[1]/div/div/div/div/ul/li");
+        private readonly By  btnBookThisRoom = By.XPath("//*[contains(@id, 'description-hotelroom')]");
+        private readonly By  bookRoomException = By.XPath("//*[@id='HotelResultContent']/div[1]/div/div/div/div/ul/li");
         //private By hotelRoomsCount = By.Id("hotel-rooms-count");
-        private By hotelRoomsCount = By.XPath("//*[@id='hotel-rooms-count']/strong");
+        //private By hotelRoomsCount = By.XPath("//*[@id='hotel-rooms-count']/strong");
 
-        public int listOfAvailableRooms()
+        public int ListOfAvailableRooms()
         {
-            IReadOnlyCollection<IWebElement> listOfAvailableRooms = WebElementWrapper.getWebElements(btnBookThisRoom);
+            IReadOnlyCollection<IWebElement> listOfAvailableRooms = WebElementWrapper.GetWebElements(btnBookThisRoom);
             //Console.WriteLine("Rooms are available for selected hotel :"+(listOfAvailableRooms.Count()));
             return listOfAvailableRooms.Count();
         }

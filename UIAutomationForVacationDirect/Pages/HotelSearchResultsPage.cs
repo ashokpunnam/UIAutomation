@@ -16,26 +16,26 @@ namespace UIAutomationForVacationDirect.Pages
 
         }
 
-        private By srtHotelRecommended = By.Id("HotelRecommended");
-        private By srtStarRating = By.Id("StarRating");
-        private By srtPricePerNight = By.Id("PricePerNight");
-        private By srtDistanceSort = By.Id("DistanceSort");
-        private By srtHotelName = By.Id("HotelName");
-        private By btnChooseRoom = By.XPath("//*[contains(@id, 'ChooseRoom')]");
-        private By chkFilterHotelResults = By.XPath("//*[contains(@id, 'StarRatingFilter')]");
+        private readonly By srtHotelRecommended = By.Id("HotelRecommended");
+        private readonly By srtStarRating = By.Id("StarRating");
+        private readonly By srtPricePerNight = By.Id("PricePerNight");
+        private readonly By srtDistanceSort = By.Id("DistanceSort");
+        private readonly By srtHotelName = By.Id("HotelName");
+        private readonly By btnChooseRoom = By.XPath("//*[contains(@id, 'ChooseRoom')]");
+        private readonly By chkFilterHotelResults = By.XPath("//*[contains(@id, 'StarRatingFilter')]");
 
         IReadOnlyCollection<IWebElement> ListOfHotels;
 
-        public void filterHotelResults(List<int> filterCriteria)
+        public void FilterHotelResults(List<int> filterCriteria)
         {
-            IReadOnlyCollection<IWebElement> elements = WebElementWrapper.getWebElements(chkFilterHotelResults);
+            IReadOnlyCollection<IWebElement> elements = WebElementWrapper.GetWebElements(chkFilterHotelResults);
             for (int i = 0; i < elements.Count(); i++)
             {
 
                 int elementValue = int.Parse(elements.ElementAt(i).GetAttribute("Value"));
                 if (WebElementWrapper.FilterSearch(filterCriteria, elementValue))
                 {
-                    WebElementWrapper.moveToElementAndClick(elements.ElementAt(i));     
+                    WebElementWrapper.MoveToElementAndClick(elements.ElementAt(i));     
                     
 
                 }
@@ -50,7 +50,7 @@ namespace UIAutomationForVacationDirect.Pages
             ListOfHotels = driver.FindElements(btnChooseRoom);
         }
 
-        public HotelBookRoomPage chooseRoom()
+        public HotelBookRoomPage ChooseRoom()
         {
             //IReadOnlyCollection<IWebElement> chooseRooms = driver.FindElements(btnChooseRoom);
             // IReadOnlyCollection<IWebElement> chooseRooms = getWebElements(btnChooseRoom);
@@ -69,7 +69,7 @@ namespace UIAutomationForVacationDirect.Pages
 
         }
 
-        public void sortHotelSearch(String filterCriteria)
+        public void SortHotelSearch(String filterCriteria)
         {
             FilterCriteria fltrCriteria;
             Enum.TryParse(filterCriteria, out fltrCriteria);
