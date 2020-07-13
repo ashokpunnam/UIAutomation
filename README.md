@@ -35,6 +35,17 @@ To run the tests:
  7. Click on Build-->Build Solutuon
  8. Once Build is successful, click on Test and open Test explorer
  9. Run all tests and watch execution flow
+ 
+# Execution flow
+   - Scenarios are written using BDD concept and by using gherkin
+   - Start point for the automation is HotelSearch.feature file
+   - HotelSearch.feature is binded with HotelSearchSteps.cs file which defines the execution flow
+   - HotelSearchSteps.cs instantiate Browser object and create Driver session by using test hooks
+   - BasePage recieves the Driver context created above and produces driver object as well as set driver run time properties required for all the pages   
+   - Background (Setup) steps in HotelSearchSteps.cs launch vacation direct application and instantiate all the pages
+   - Depending on the functionality written in step definition, each functional flow is triggered and executed
+   - Test scenarios can be executed using MS Test/NUnit and test results can be viewed on test explorer in visual studio
+   - Test reporting and logging can be added to the framework to generate beautiful html reports
   
 # Points considered while developing the solution:
   1.  Create seperate projects for defining and developing framework components and Test components
@@ -54,3 +65,4 @@ To run the tests:
   5. Solution can be integrated in a Jenkins/Azure pipeline and can be executed as part of CICD/DevOps process
   6. Code Review and Refactoring
   7. Configuration Readers and Settings to control environment variables in an efficient way
+  8. Adding screenshots for the failed steps/test cases
