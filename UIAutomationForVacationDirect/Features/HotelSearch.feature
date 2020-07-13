@@ -8,7 +8,7 @@ Background:
 		And open a website using url 'http://www.vacationsdirect.com'
 
 @acceptanceTest
-Scenario: Search for hotels in New York City for dates a month in the future
+Scenario: Search for Hotels in a city for dates provided by user
 	Given I have navigated to the application
 	And I click on Hotel button 
 	And I enter city: '<city>', future check in date: '<checkInDay>', check out date: '<checkOutDay>' and click on search for hotels button	
@@ -20,7 +20,7 @@ Scenario: Search for hotels in New York City for dates a month in the future
 	# One day in future from current day starts at 0. Please provide values for checkInDay and checkOutDay accordinlgy
 
 @acceptanceTest
-Scenario: Filter hotel search results based on 'Star Rating'
+Scenario: Search for Hotels in a city for dates provided by user and filter hotel search results
 	Given I have navigated to the application
 	And I click on Hotel button 
 	And I enter city: '<city>', future check in date: '<checkInDay>', check out date: '<checkOutDay>' and click on search for hotels button	
@@ -33,7 +33,7 @@ Scenario: Filter hotel search results based on 'Star Rating'
 	# One day in future from current day starts at 0. Please provide values for checkInDay and checkOutDay accordinlgy
 
 @acceptanceTest
-Scenario: See available rooms after selecting a hotel from the hotel search results
+Scenario: Search for Hotels in a city for dates provided by user and filer the search by star rating and see available rooms
 	Given I have navigated to the application
 	And I click on Hotel button 
 	And I enter city: '<city>', future check in date: '<checkInDay>', check out date: '<checkOutDay>' and click on search for hotels button	
@@ -41,10 +41,8 @@ Scenario: See available rooms after selecting a hotel from the hotel search resu
 	Then I Filter Hotel Search Results based on Star Rating: '<starRating>'
 	Then I selected a hotel from the Search Results
 	Then I see available rooms
-
 	Examples: 
 	| city          | checkInDay | checkOutDay | starRating |
 	| New York City | 0          | 29          | 5	        |
 
 	# One day in future from current day starts at 0. Please provide values for checkInDay and checkOutDay accordinlgy
-
