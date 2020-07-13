@@ -34,8 +34,21 @@ To run the tests:
  7. In Visual Studio, select Tools > Extensions and Updates > Online. Install SpecFlow extension and restart VS
  8. Install SpecRun (NuGet) for enhanced reporting and IDE intellisense, formatting etc.
  
-Below are the to do items and can be added to the framework:
+# Below Items are considered while developing the solution:
+  1.  Create seperate projects for defining and developing framework components and Test components
+  2. Create Hooks and Base paages to communicate between Framework components and test components
+  3. Develop framework in such a way that it can be easily manintainable, reusable and scalable
+  4. Framework can be made readable by adding comments, indentations and documentation. This was not done due to time constraints
+  5. All classes/files in framework and test projects are designed keeping in mind some of below principals
+      - Object Oriented and Generic/functional programming principals in mind
+      - Do Not Repeat and clean code
+      - Modular      
+ 
+Below are the to do items and can be added to the framework/test project:
   1. Log Utility to log test execution for tracing and debugging
   2. Reporting utility to customize and generate test execution and summary report
   3. Generic page to handle page objects in test cases/step definitions in effiecient and cleaner way
-  4. 
+  4. Comments and documentation
+  5. Solution can be integrated in a Jenkins/Azure pipeline and can be executed as part of CICD/DevOps process
+  6. Code Review and Refactoring
+  7. Configuration Readers and Settings to control environment variables in an efficient way
