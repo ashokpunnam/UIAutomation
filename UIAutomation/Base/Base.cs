@@ -7,15 +7,15 @@ namespace UIAutomationFramework.Base
 {
     public class Base
     {
-        public BasePage CurrentPage { get; set; }
+       /* public BasePage CurrentPage { get; set; }
 
-        private IWebDriver driver { get; set; }
+        private IWebDriver Driver { get; set; }
 
         protected TPage GetInstance<TPage>() where TPage : BasePage, new()
         {
             TPage pageInstance = new TPage()
             {
-                driver = DriverContext.Driver
+                Driver = DriverContext.Driver
             };
 
             //PageFactory.InitElements(DriverContext.Driver, pageInstance);
@@ -26,6 +26,6 @@ namespace UIAutomationFramework.Base
         public TPage As<TPage>() where TPage : BasePage
         {
             return (TPage)this;
-        }
+        }*/
     }
 }

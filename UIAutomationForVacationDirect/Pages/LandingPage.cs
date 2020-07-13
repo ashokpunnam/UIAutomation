@@ -17,15 +17,15 @@ namespace UIAutomationForVacationDirect.Pages
             //this.driver = driver;
         }
 
-        private By btnHotel = By.XPath("//*[@id='SearchWidgetWrapper']/section/div/ul/li[2]/button");
-        private By homeIcon = By.XPath("//*[@id='4722']/div[2]/div[1]/header/div[2]/a/img");
+        private readonly By btnHotel = By.XPath("//*[@id='SearchWidgetWrapper']/section/div/ul/li[2]/button");
+        private readonly By homeIcon = By.XPath("//*[@id='4722']/div[2]/div[1]/header/div[2]/a/img");
 
-        public string getHomePageIcon()
+        public string GetHomePageIcon()
         {
-            return WebElementWrapper.getAttributeValue(homeIcon, "alt");
+            return WebElementWrapper.GetAttributeValue(homeIcon, "alt");
         }
 
-        public HotelSearchPage clickHotel()
+        public HotelSearchPage ClickHotel()
         {
             //driver.FindElement(btnHotel).Click();
             WebElementWrapper.Click(btnHotel);
