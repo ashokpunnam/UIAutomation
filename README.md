@@ -36,7 +36,7 @@ To run the tests:
  8. Once Build is successful, click on Test and open Test explorer
  9. Run all tests and watch execution flow
   
-# Below Items are considered while developing the solution:
+# Points cosnidered while developing the solution:
   1.  Create seperate projects for defining and developing framework components and Test components
   2. Create Hooks and Base paages to communicate between Framework components and test components
   3. Develop framework in such a way that it can be easily manintainable, reusable and scalable
@@ -46,7 +46,7 @@ To run the tests:
       - Do Not Repeat and clean code
       - Modular      
  
-# Below are the to do items and can be added to the framework/test project:
+# To Do Items that can be added to the framework/test project:
   1. Log Utility to log test execution for tracing and debugging
   2. Reporting utility to customize and generate test execution and summary report
   3. Generic page to handle page objects in test cases/step definitions in effiecient and cleaner way
