@@ -8,7 +8,7 @@ Element interactions like send data to an element, get data from an element, but
 - SpecFlow (BDD)
 - Selenium (WebDriver)
 - NUnit 
-- utilises Page Object Model pattern
+- MSTest
 
 
 # Getting started
@@ -17,7 +17,7 @@ To run the tests:
 2. Install NuGet (package manager)
 3. Connect to github project (View > Team Explorer)
 4. clone repository: https://github.com/ashokpunnam/UIAutomation.git
-5. Use NuGet (Project > Manage NuGet packages) to install below packages if they are not downloaded from the project. Below packages are installed automatically when solution is cloned from git.
+5. Use NuGet (Project > Manage NuGet packages) to install below packages if they are not already downloaded from github while cloning the project:
   - Selenium Web Driver
   - Selenium Chrome Driver
   - Selenium Firefox Driver
@@ -30,9 +30,8 @@ To run the tests:
   - Cucumber.Messages
   - Gherkin
   - Microsoft.CodeCoverage  
- 6. As part of the NuGet installs, you will notice that an App.config file was generated in the structure of the project. -- If we chosen to use MSTest instead of NUnit as a         test runner, we need to update this file.
- 7. In Visual Studio, select Tools > Extensions and Updates > Online. Install SpecFlow extension and restart VS
- 8. Install SpecRun (NuGet) for enhanced reporting and IDE intellisense, formatting etc.
+  - SpecRun
+ 6. In Visual Studio, select Tools > Extensions and Updates > Online. Install SpecFlow extension and restart VS 
  
 # Below Items are considered while developing the solution:
   1.  Create seperate projects for defining and developing framework components and Test components
@@ -44,7 +43,7 @@ To run the tests:
       - Do Not Repeat and clean code
       - Modular      
  
-Below are the to do items and can be added to the framework/test project:
+# Below are the to do items and can be added to the framework/test project:
   1. Log Utility to log test execution for tracing and debugging
   2. Reporting utility to customize and generate test execution and summary report
   3. Generic page to handle page objects in test cases/step definitions in effiecient and cleaner way
