@@ -37,8 +37,8 @@ namespace UIAutomationForVacationDirect.StepDefinitions
         [Given(@"open a website using url '(.*)'")]
         public void GivenOpenAWebsiteUsingUrl(string url)
         {
-            DriverContext.Driver.Url = url;
-
+            // DriverContext.Driver.Url = url;
+            hookInitialize.NavigateSite(url);
         }
 
         [Given(@"I have navigated to the application")]
@@ -60,7 +60,9 @@ namespace UIAutomationForVacationDirect.StepDefinitions
         [Given(@"I enter city: '(.*)', future check in date: '(.*)', check out date: '(.*)' and click on search for hotels button")]
         public void GivenIEnterCityFutureCheckInDateCheckOutDateAndClickOnSearchForHotelsButton(string city, string checkInDay, string checkOutDay)
         {            
-            hotelSearchResultsPage = hotelSearchPage.SearchForHotels(city, int.Parse(checkInDay), int.Parse(checkOutDay));
+                hotelSearchResultsPage = hotelSearchPage.SearchForHotels(city, int.Parse(checkInDay), int.Parse(checkOutDay));
+
+                     
         }  
             
 

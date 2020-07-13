@@ -60,15 +60,7 @@ namespace UIAutomationFramework.Base
 
         }
 
-        public virtual void NavigateSite()
-        {
-            // DriverContext.Browser.GoToUrl(Settings.AUT);   
-            DriverContext.Browser.GoToUrl("http://www.vacationsdirect.com");
-
-
-            // .Manage().Timeouts(10);
-//            LogUtility.Write("Opened the browser !!!");
-        }
+        
 
 
     }

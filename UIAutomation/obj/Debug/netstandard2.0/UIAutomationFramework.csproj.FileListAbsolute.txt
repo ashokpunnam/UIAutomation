@@ -6,12 +6,3 @@ C:\Users\972797\source\repos\UIAutomation\UIAutomation\obj\Debug\netstandard2.0\
 C:\Users\972797\source\repos\UIAutomation\UIAutomation\obj\Debug\netstandard2.0\UIAutomationFramework.AssemblyInfo.cs
 C:\Users\972797\source\repos\UIAutomation\UIAutomation\obj\Debug\netstandard2.0\UIAutomationFramework.dll
 C:\Users\972797\source\repos\UIAutomation\UIAutomation\obj\Debug\netstandard2.0\UIAutomationFramework.pdb
-D:\GITPub_Projects\UIAutomation\UIAutomation\bin\Debug\netstandard2.0\UIAutomationFramework.deps.json
-D:\GITPub_Projects\UIAutomation\UIAutomation\bin\Debug\netstandard2.0\UIAutomationFramework.dll
-D:\GITPub_Projects\UIAutomation\UIAutomation\bin\Debug\netstandard2.0\UIAutomationFramework.pdb
-D:\GITPub_Projects\UIAutomation\UIAutomation\obj\Debug\netstandard2.0\UIAutomationFramework.csprojAssemblyReference.cache
-D:\GITPub_Projects\UIAutomation\UIAutomation\obj\Debug\netstandard2.0\UIAutomationFramework.csproj.CoreCompileInputs.cache
-D:\GITPub_Projects\UIAutomation\UIAutomation\obj\Debug\netstandard2.0\UIAutomationFramework.AssemblyInfoInputs.cache
-D:\GITPub_Projects\UIAutomation\UIAutomation\obj\Debug\netstandard2.0\UIAutomationFramework.AssemblyInfo.cs
-D:\GITPub_Projects\UIAutomation\UIAutomation\obj\Debug\netstandard2.0\UIAutomationFramework.dll
-D:\GITPub_Projects\UIAutomation\UIAutomation\obj\Debug\netstandard2.0\UIAutomationFramework.pdb

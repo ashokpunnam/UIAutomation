@@ -28,6 +28,7 @@ namespace UIAutomationForVacationDirect.Pages
         //private readonly By txtPreferredHotel = By.Id("inputPreferredHotel");
         //private readonly By slctStarRating = By.Id("selectStarRating");
         private readonly By btnhotelSearchButton = By.Id("hotelSearchButton");
+        private readonly By errorInputCheckInDateError = By.Id("inputCheckInDateError");
 
         public HotelSearchResultsPage SearchForHotels(string city, int checkInDate, int checkOutDate) 
         {
@@ -43,9 +44,34 @@ namespace UIAutomationForVacationDirect.Pages
             WebElementWrapper.Click(lstElementsToDate.ElementAt(checkOutDate));
 
             WebElementWrapper.Click(btnhotelSearchButton);
-            return new HotelSearchResultsPage();
+            if (InputCheckInDateError())
+            {
+                Console.WriteLine("Please enter a date at least 1 day after today's date");
+            }
+            else
+            {
+                return new HotelSearchResultsPage();
+
+            }
+            return null;
+            
 
 
+        }
+
+        public bool InputCheckInDateError()
+        {
+            try
+            {
+                if (driver.FindElement(errorInputCheckInDateError).Displayed)
+                    return true;
+                
+            }
+            catch
+            {
+                return false;
+            }
+            return false;
         }
 
 

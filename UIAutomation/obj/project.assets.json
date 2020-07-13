@@ -5507,11 +5507,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GITPub_Projects\\UIAutomation\\UIAutomation\\UIAutomationFramework.csproj",
+      "projectUniqueName": "C:\\Users\\972797\\source\\repos\\UIAutomation\\UIAutomation\\UIAutomationFramework.csproj",
       "projectName": "UIAutomationFramework",
-      "projectPath": "D:\\GITPub_Projects\\UIAutomation\\UIAutomation\\UIAutomationFramework.csproj",
+      "projectPath": "C:\\Users\\972797\\source\\repos\\UIAutomation\\UIAutomation\\UIAutomationFramework.csproj",
       "packagesPath": "C:\\Users\\972797\\.nuget\\packages\\",
-      "outputPath": "D:\\GITPub_Projects\\UIAutomation\\UIAutomation\\obj\\",
+      "outputPath": "C:\\Users\\972797\\source\\repos\\UIAutomation\\UIAutomation\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\972797\\AppData\\Roaming\\NuGet\\NuGet.Config",
