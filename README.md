@@ -46,8 +46,8 @@ To run the tests:
    - Test reporting and logging can be added to the framework to generate html reports
   
 # Points considered while developing the solution:
-  1.  Create seperate projects for defining and developing framework components and Test components
-  2. Create Hooks and Base paages to communicate between Framework components and test components
+  1. Create seperate projects for defining and developing framework components and Test components
+  2. Create Hooks and Base classes to communicate between Framework components and test components
   3. Develop framework in such a way that it can be easily manintainable, reusable and scalable
   4. Framework can be made readable by adding comments, indentations and documentation. This was not done due to time constraints
   5. All classes/files in framework and test projects are designed keeping in mind some of below principals
