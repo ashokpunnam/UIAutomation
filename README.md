@@ -26,9 +26,7 @@ To run the tests:
   - SpecFlow
   - SpecFlow.Assist.Dynamic
   - SpecFlow.MSTest
-  - SpecFlow.Tools.MsBuild.Generation
-  - Cucumber.Messages
-  - Gherkin
+  - SpecFlow.Tools.MsBuild.Generation   
   - Microsoft.CodeCoverage  
   - SpecRun
  6. In Visual Studio, select Tools > Extensions and Updates > Online. Install SpecFlow extension and restart VS 
