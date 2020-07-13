@@ -39,7 +39,7 @@ To run the tests:
    - Start point for the automation is HotelSearch.feature file
    - HotelSearch.feature is binded with HotelSearchSteps.cs file which defines the execution flow
    - HotelSearchSteps.cs instantiate Browser object and create Driver session by using test hooks
-   - BasePage recieves the Driver context created above and produces driver object as well as set driver run time properties required for all the pages   
+   - BasePage of framework component recieves the Driver context created above and produces driver object as well as set driver run time properties required for all the pages   
    - Background (Setup) steps in HotelSearchSteps.cs launch vacation direct application and instantiate all the pages
    - Depending on the functionality written in step definition, each functional flow is triggered and executed
    - Test scenarios can be executed using MS Test/NUnit and test results can be viewed on test explorer in visual studio
