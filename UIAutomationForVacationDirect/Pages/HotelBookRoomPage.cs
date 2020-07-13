@@ -23,10 +23,9 @@ namespace UIAutomationForVacationDirect.Pages
         //private By hotelRoomsCount = By.XPath("//*[@id='hotel-rooms-count']/strong");
 
         public int ListOfAvailableRooms()
-        {
-            Thread.Sleep(1000);
+        {            
             IReadOnlyCollection<IWebElement> listOfAvailableRooms = WebElementWrapper.GetWebElements(btnBookThisRoom);
-            //Console.WriteLine("Rooms are available for selected hotel :"+(listOfAvailableRooms.Count()));
+            Console.WriteLine("Rooms are available for selected hotel :"+(listOfAvailableRooms.Count()));
             return listOfAvailableRooms.Count();
         }
 

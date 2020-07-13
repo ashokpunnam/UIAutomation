@@ -165,12 +165,12 @@ this.FeatureBackground();
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("acceptanceTest")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "New York City")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:city", "New York City")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:checkInDay", "1")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:checkInDay", "0")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:checkOutDay", "29")]
         public virtual void SearchForHotelsInACityForDatesProvidedByUser_NewYorkCity()
         {
 #line 11
-this.SearchForHotelsInACityForDatesProvidedByUser("New York City", "1", "29", ((string[])(null)));
+this.SearchForHotelsInACityForDatesProvidedByUser("New York City", "0", "29", ((string[])(null)));
 #line hidden
         }
         
@@ -322,13 +322,13 @@ this.FeatureBackground();
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("acceptanceTest")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "New York City")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:city", "New York City")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:checkInDay", "1")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:checkInDay", "0")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:checkOutDay", "29")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:starRating", "5")]
         public virtual void SearchForHotelsInACityForDatesProvidedByUserAndFilerTheSearchByStarRatingAndSeeAvailableRooms_NewYorkCity()
         {
 #line 36
-this.SearchForHotelsInACityForDatesProvidedByUserAndFilerTheSearchByStarRatingAndSeeAvailableRooms("New York City", "1", "29", "5", ((string[])(null)));
+this.SearchForHotelsInACityForDatesProvidedByUserAndFilerTheSearchByStarRatingAndSeeAvailableRooms("New York City", "0", "29", "5", ((string[])(null)));
 #line hidden
         }
     }
