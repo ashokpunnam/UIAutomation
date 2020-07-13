@@ -105,7 +105,7 @@ namespace UIAutomationForVacationDirect.Features
 #line hidden
         }
         
-        public virtual void SearchForHotelsInACityForDatesProvidedByUser(string city, string checkInDay, string checkOutDay, string[] exampleTags)
+        public virtual void SearchForHotelsInNewYorkCityForDatesAMonthInTheFuture(string city, string checkInDay, string checkOutDay, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "acceptanceTest"};
@@ -118,7 +118,7 @@ namespace UIAutomationForVacationDirect.Features
             argumentsOfScenario.Add("city", city);
             argumentsOfScenario.Add("checkInDay", checkInDay);
             argumentsOfScenario.Add("checkOutDay", checkOutDay);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search for Hotels in a city for dates provided by user", null, tagsOfScenario, argumentsOfScenario);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search for hotels in New York City for dates a month in the future", null, tagsOfScenario, argumentsOfScenario);
 #line 11
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -160,21 +160,22 @@ this.FeatureBackground();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Search for Hotels in a city for dates provided by user: New York City")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Search for hotels in New York City for dates a month in the future: New York City" +
+            "")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Search for hotels and see available rooms after selecting a hotel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("acceptanceTest")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "New York City")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:city", "New York City")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:checkInDay", "0")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:checkOutDay", "29")]
-        public virtual void SearchForHotelsInACityForDatesProvidedByUser_NewYorkCity()
+        public virtual void SearchForHotelsInNewYorkCityForDatesAMonthInTheFuture_NewYorkCity()
         {
 #line 11
-this.SearchForHotelsInACityForDatesProvidedByUser("New York City", "0", "29", ((string[])(null)));
+this.SearchForHotelsInNewYorkCityForDatesAMonthInTheFuture("New York City", "0", "29", ((string[])(null)));
 #line hidden
         }
         
-        public virtual void SearchForHotelsInACityForDatesProvidedByUserAndFilterHotelSearchResults(string city, string checkInDay, string checkOutDay, string starRating, string[] exampleTags)
+        public virtual void FilterHotelSearchResultsBasedOnStarRating(string city, string checkInDay, string checkOutDay, string starRating, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "acceptanceTest"};
@@ -188,8 +189,7 @@ this.SearchForHotelsInACityForDatesProvidedByUser("New York City", "0", "29", ((
             argumentsOfScenario.Add("checkInDay", checkInDay);
             argumentsOfScenario.Add("checkOutDay", checkOutDay);
             argumentsOfScenario.Add("starRating", starRating);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search for Hotels in a city for dates provided by user and filter hotel search re" +
-                    "sults", null, tagsOfScenario, argumentsOfScenario);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Filter hotel search results based on \'Star Rating\'", null, tagsOfScenario, argumentsOfScenario);
 #line 21
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -234,8 +234,7 @@ this.FeatureBackground();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Search for Hotels in a city for dates provided by user and filter hotel search re" +
-            "sults: New York City")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Filter hotel search results based on \'Star Rating\': New York City")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Search for hotels and see available rooms after selecting a hotel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("acceptanceTest")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "New York City")]
@@ -243,14 +242,14 @@ this.FeatureBackground();
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:checkInDay", "0")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:checkOutDay", "29")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:starRating", "5")]
-        public virtual void SearchForHotelsInACityForDatesProvidedByUserAndFilterHotelSearchResults_NewYorkCity()
+        public virtual void FilterHotelSearchResultsBasedOnStarRating_NewYorkCity()
         {
 #line 21
-this.SearchForHotelsInACityForDatesProvidedByUserAndFilterHotelSearchResults("New York City", "0", "29", "5", ((string[])(null)));
+this.FilterHotelSearchResultsBasedOnStarRating("New York City", "0", "29", "5", ((string[])(null)));
 #line hidden
         }
         
-        public virtual void SearchForHotelsInACityForDatesProvidedByUserAndFilerTheSearchByStarRatingAndSeeAvailableRooms(string city, string checkInDay, string checkOutDay, string starRating, string[] exampleTags)
+        public virtual void SeeAvailableRoomsAfterSelectingAHotelFromTheHotelSearchResults(string city, string checkInDay, string checkOutDay, string starRating, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "acceptanceTest"};
@@ -264,8 +263,7 @@ this.SearchForHotelsInACityForDatesProvidedByUserAndFilterHotelSearchResults("Ne
             argumentsOfScenario.Add("checkInDay", checkInDay);
             argumentsOfScenario.Add("checkOutDay", checkOutDay);
             argumentsOfScenario.Add("starRating", starRating);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search for Hotels in a city for dates provided by user and filer the search by st" +
-                    "ar rating and see available rooms", null, tagsOfScenario, argumentsOfScenario);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("See available rooms after selecting a hotel from the hotel search results", null, tagsOfScenario, argumentsOfScenario);
 #line 32
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -316,8 +314,8 @@ this.FeatureBackground();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Search for Hotels in a city for dates provided by user and filer the search by st" +
-            "ar rating and see available rooms: New York City")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("See available rooms after selecting a hotel from the hotel search results: New Yo" +
+            "rk City")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Search for hotels and see available rooms after selecting a hotel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("acceptanceTest")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "New York City")]
@@ -325,10 +323,10 @@ this.FeatureBackground();
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:checkInDay", "0")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:checkOutDay", "29")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:starRating", "5")]
-        public virtual void SearchForHotelsInACityForDatesProvidedByUserAndFilerTheSearchByStarRatingAndSeeAvailableRooms_NewYorkCity()
+        public virtual void SeeAvailableRoomsAfterSelectingAHotelFromTheHotelSearchResults_NewYorkCity()
         {
 #line 32
-this.SearchForHotelsInACityForDatesProvidedByUserAndFilerTheSearchByStarRatingAndSeeAvailableRooms("New York City", "0", "29", "5", ((string[])(null)));
+this.SeeAvailableRoomsAfterSelectingAHotelFromTheHotelSearchResults("New York City", "0", "29", "5", ((string[])(null)));
 #line hidden
         }
     }
