@@ -17,6 +17,8 @@ Scenario: Search for hotels in New York City for dates a month in the future
 	| city          | checkInDay | checkOutDay | 
 	| New York City | 0          | 29          | 
 
+	# One day in future from current day starts at 0. Please provide values for checkInDay and checkOutDay accordinlgy
+
 @acceptanceTest
 Scenario: Filter hotel search results based on 'Star Rating'
 	Given I have navigated to the application
@@ -27,6 +29,8 @@ Scenario: Filter hotel search results based on 'Star Rating'
 	Examples: 
 	| city          | checkInDay | checkOutDay | starRating |
 	| New York City | 0          | 29          | 5	        |
+
+	# One day in future from current day starts at 0. Please provide values for checkInDay and checkOutDay accordinlgy
 
 @acceptanceTest
 Scenario: See available rooms after selecting a hotel from the hotel search results
@@ -41,4 +45,6 @@ Scenario: See available rooms after selecting a hotel from the hotel search resu
 	Examples: 
 	| city          | checkInDay | checkOutDay | starRating |
 	| New York City | 0          | 29          | 5	        |
+
+	# One day in future from current day starts at 0. Please provide values for checkInDay and checkOutDay accordinlgy
 
